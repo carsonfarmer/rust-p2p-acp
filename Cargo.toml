@@ -1,0 +1,19 @@
+[package]
+name = "acp-iroh-proxy"
+version = "0.1.0"
+edition = "2021"
+description = "P2P proxy for ACP (Agent Client Protocol) over Iroh"
+
+[[bin]]
+name = "acp-proxy"
+path = "src/main.rs"
+
+[dependencies]
+iroh = "1.0"
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1"
+hex = "0.4"
+serde_json = "1"
